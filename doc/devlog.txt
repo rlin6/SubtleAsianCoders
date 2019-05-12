@@ -16,6 +16,19 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+rickyL -- 2019-05-12 11:50AM
+--------------------------------------------------------------
+Added design.pdf with the following changes:
+- Reworded description to clarify that data visualization only 
+applies to physics and that there's one section per subject
+- Added an example of a physics simulation and additional 
+possible chemistry features to description
+- Clarified that we're writing math algorithms in physics.js 
+and will be looking at some simulations for guidance 
+- Elaborated on chemistry & physics features and functionalities 
+described in the tasks 
+==============================================================
+
 rickyL -- 2019-05-08 10:00PM
 --------------------------------------------------------------
 - Added requirements.txt
