@@ -16,6 +16,14 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+kyleT -- 2019-05-26 1:23PM
+--------------------------------------------------------------
+- Started moving api to own repo
+- Root page will give all elements in list
+- also has individual element pages
+- api found at https://github.com/kyletau67/ChemAPI
+==============================================================
+
 allTheAsianCoders -- 2019-05-16 12:32PM
 --------------------------------------------------------------
 - Successfully incorporated repo to Apache server
