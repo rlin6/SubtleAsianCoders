@@ -16,12 +16,16 @@ git clone https://github.com/rlin6/SubtleAsianCoders
 $ python3 -m venv venv
 $ . venv/bin/activate
 ```
-3. Go to the project folder.
+3. Install dependencies
+```
+$ pip install -r requirements.txt
+```
+4. Go to the project folder.
 ```
 (venv) $ cd SubtleAsianCoders
 ```
-4. Run app.py
+5. Run app.py
 ```
 (venv) $ python app.py
 ```
-5. Navigate to ```localhost:5000``` or ```127.0.0.1``` on your web browser.
+6. Navigate to ```localhost:5000``` or ```127.0.0.1``` on your web browser.
