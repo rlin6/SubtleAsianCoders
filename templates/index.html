@@ -2,10 +2,15 @@
 <html>
 {% extends "base.html" %}
   <head>
-    {% block title %}Home{% endblock %}
+        {% block link %}     
+        <link rel="stylesheet" href="../static/style.css">
+        {% endblock %} 
+        {% block title %}Home{% endblock %}
   </head>
-  {% block body %}<br><h1 class="text-center">Subtle Asian Coding</h1>{% endblock %}  
+  {% block body %}<br><h1 class="text-center">Subtle Asian Coding</h1>
 
-    <button>Press this</button>
+    <input type="button" class="button" value="Press This" />
+
+    {% endblock %}  
 
 </html>
