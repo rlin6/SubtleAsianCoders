@@ -7,7 +7,8 @@ Claire Liu
 Kyle Tau  
 
 ## Launch instructions
-1. Clone this repo.
+# Install and run on localhost
+1. Clone this repo in your terminal.
 ```
 git clone https://github.com/rlin6/SubtleAsianCoders
 ```
@@ -29,3 +30,5 @@ $ pip install -r requirements.txt
 (venv) $ python app.py
 ```
 6. Navigate to ```localhost:5000``` or ```127.0.0.1``` on your web browser.
+
+# Install and run on Apache2
