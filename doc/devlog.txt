@@ -16,6 +16,14 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+
+claireL -- 2019-05-30 08:00AM
+--------------------------------------------------------------
+- pushed index.html with some jinja to try to implement kyle's api
+- fixed kyle's api so we don't need unecessary queries
+
+==============================================================
+
 rickyL -- 2019-05-29 09:46PM
 --------------------------------------------------------------
 - Updated README to reflect current state of project 
@@ -31,6 +39,12 @@ cathyC -- 2019-05-29 11:30PM
 - Added launch instructions
 ==============================================================
 
+claireL -- 2019-05-29 03:00PM
+--------------------------------------------------------------
+- found a model webpage to base our landing page off of
+- added indices to elements page so that you can click and get info
+- added highlighting to elements page that works when you hover
+
 kyleT -- 2019-05-26 5:15PM
 --------------------------------------------------------------
 - finished writing in all elements for the chem api
@@ -43,6 +57,13 @@ kyleT -- 2019-05-26 1:23PM
 - also has individual element pages
 - api found at https://github.com/kyletau67/ChemAPI
 ==============================================================
+
+claireL -- 2019-05-26 12:00PM
+--------------------------------------------------------------
+- pushed a sand.html page that pulls JS from a netlogo web server page to
+deploy a physics simulation
+- it opens as an html pagebut doesn't run as an app route-- jinja says
+it's a problem with brackets but we couldn't figure it out
 
 allTheAsianCoders -- 2019-05-16 12:32PM
 --------------------------------------------------------------
