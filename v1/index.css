@@ -1,0 +1,203 @@
+/*your css code goes here*/
+
+body{
+    background:#202035 !important;
+    font-family:'Nunito',sans-serif;
+}
+.main{}
+
+rect, text{
+    cursor:pointer;
+}
+
+#legend{
+    position:relative;
+    top:50px;
+    width:1000px;
+    height:100px;
+    margin:0 auto;
+    text-align:center;
+}
+#container{
+    position:relative;
+    top:50px;
+    width:1000px;
+    height:600px;
+    margin:0 auto;
+    text-align:center;
+}
+#element{
+    position:relative;
+    top:50px;
+    width:800px;
+    height:200px;
+    margin:0 auto;
+    text-align:center;
+    font-family:'Nunito',sans-serif;
+    color:#FFFFFF;
+}
+
+.actinide{
+    fill:#F985A2;
+    stroke:#F985A2;
+}
+.lanthanide{
+    fill:#F6B1EE;
+    stroke:#F6B1EE;;
+}
+.alkaliMetal{
+    fill:#FF593F;
+    stroke:#FF593F;
+}
+.alkaliEarthMetal{
+    fill:#FFC288;
+    stroke:#FFC288;
+}
+.transitionMetal{
+    fill:#FF8961;
+    stroke:#FF8961;
+}
+.diatomicNonmetal{
+    fill:#FFEB61;
+    stroke:#FFEB61;
+}
+.nobelGas{
+    fill:#7AE4D9;
+    stroke:#7AE4D9;
+}
+.unknown{
+    fill:#DDDDDD;
+    stroke:#DDDDDD;
+}
+.polyatomicNonmetal{
+    fill:#7DEAB3;
+    stroke:#7DEAB3;
+}
+.metalloid{
+    fill:#516D5A;
+    stroke:#516D5A;
+}
+.postTransitionMetal{
+    fill:#AAAAAA;
+    stroke:#AAAAAA;
+}
+
+
+/* START actinide */
+.r9, .r7c3{
+    fill:#F985A2;
+    stroke:#202035;
+}
+/* END actinide */
+
+/* START lanthanide */
+.r8, .r6c3{
+    fill:#F6B1EE;
+    stroke:#202035;
+}
+/* END lanthanide */
+
+/* START alkali mental */
+.r7c1, .r6c1, .r5c1, .r4c1, .r3c1, .r2c1{
+    fill:#FF593F;
+    stroke:#202035;
+}
+/* END alkali mental */
+
+/* START alkali earth mental */
+.r7c2, .r6c2, .r5c2, .r4c2, .r3c2, .r2c2{
+    fill:#FFC288;
+    stroke:#202035;
+}
+/* END alkai earth mental */
+
+/* START transition mental */
+.r5c3, .r4c3,
+.r7c4, .r7c5, .r7c6, .r7c7, .r7c8, .r7c12,
+.r6c4, .r6c5, .r6c6, .r6c7, .r6c8, .r6c9, .r6c10, .r6c11, .r6c12,
+.r5c4, .r5c5, .r5c6, .r5c7, .r5c8, .r5c9, .r5c10, .r5c11, .r5c12,
+.r4c4, .r4c5, .r4c6, .r4c7, .r4c8, .r4c9, .r4c10, .r4c11, .r4c12
+{
+    fill:#FF8961;
+    stroke:#202035;
+}
+/* END transition mental */
+
+/* START diatomic nonmental */
+.r1c1, .r2c7, .r2c6, .r2c5, .r3c7, .r4c17, .r5c17{
+    fill:#FFEB61;
+    stroke:#202035;
+}
+/* END diatomic nonmental */
+
+/* START nobel gas */
+.r1c2, .r2c8, .r3c8, .r4c18, .r5c18, .r6c18{
+    fill:#7AE4D9;
+    stroke:#202035;
+}
+/* END nobel gas */
+
+/* START unknown */
+.r7c9, .r7c10, .r7c11, .r7c13, .r7c15, .r7c16, .r7c17, .r7c18{
+    fill:#DDDDDD;
+    stroke:#202035;
+}
+/* END unknown */
+
+/* START polyatomic nonmetal */
+.r2c4, .r3c5, .r3c6, .r4c16{
+    fill:#7DEAB3;
+    stroke:#202035;
+}
+/* END polyatomic nonmetal */
+
+/* START metalloid */
+.r2c3, .r3c4, .r4c14, .r4c15, .r5c15, .r5c16, .r6c17{
+    fill:#516D5A;
+    stroke:#202035;
+}
+/* END metalloid */
+
+/* START post-transition metal */
+.r3c3, .r4c13, .r5c13, .r5c14, .r6c13, .r6c14, .r6c15, .r6c16, .r7c14{
+    fill:#AAAAAA;
+    stroke:#202035;
+}
+/* END post-transition metal */
+
+
+
+
+
+.symbol{
+    fill:#202035;
+    font-weight:bold;
+    font-family:'Nunito',sans-serif !important;
+}
+.number{
+    fill:#202035;
+}
+.mass{
+    fill:#202035;
+}
+#name{
+    color:#DDDDDD;
+    text-align:center;
+    margin-bottom:10px;
+    font-size:25px;
+    font-weight:bold;
+    font-family:'Nunito',sans-serif !important;
+}
+#blurb{
+    margin-bottom:20px;
+    font-family:'Nunito',sans-serif !important;
+}
+
+
+
+.elementBox{
+    stroke:transparent !important;
+}
+.legendText{
+    fill:#FFFFFF;
+}
