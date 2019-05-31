@@ -16,6 +16,11 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+kyleT -- 2019-05-30 10:09PM
+--------------------------------------------------------------
+- started a new droplet, due to confusing mess about how to get the app to actually show up when going to the IP address on browser
+- installed LAMP stack onto new droplet, named ktau-do
+==============================================================
 
 claireL -- 2019-05-30 08:00AM
 --------------------------------------------------------------
