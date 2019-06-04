@@ -16,6 +16,13 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+kyleT -- 2019-06-03 10:06PM
+--------------------------------------------------------------
+-droplet error seems to be from httpd stuff
+-when i run "apachectl stop", droplet tells me that httpd is not running
+-restarting apache and checking status tells me that httpd is active, but calling "apachectl stop" says it hasn't been running at all.
+==============================================================
+
 kyleT -- 2019-05-30 10:09PM
 --------------------------------------------------------------
 - started a new droplet, due to confusing mess about how to get the app to actually show up when going to the IP address on browser
