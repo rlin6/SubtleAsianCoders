@@ -16,6 +16,15 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+claireL -- 2019-06-04 11:00PM
+--------------------------------------------------------------
+Weekend work:
+- Added elements.json file found online and processed it using
+elements.py
+- Used jinja and an html template for periodic tables to give infomration
+on selected elements
+- Most of chem is basically done just need to copy and paste in radio buttons
+
 kyleT -- 2019-06-03 10:06PM
 --------------------------------------------------------------
 -droplet error seems to be from httpd stuff
