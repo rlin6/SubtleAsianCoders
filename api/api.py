@@ -20,7 +20,7 @@ class Element(Resource):
                 return e, 200
         return "Element not found", 404
 
-api.add_resource(Element, "/elements")
+api.add_resource(Element, "/elements/<string:name>")
 
 if __name__ == "__main__":
     app.debug = True
