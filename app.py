@@ -12,8 +12,11 @@ def chemistry():
 
 @app.route("/physics")
 def physics():
-    return render_template('physics.html')
+    return render_template('tempPhysics.html')
 '---------------------------------  PHYSICS  -----------------------'
+@app.route("/magnet")
+def magnet():
+    return render_template('physics.html')
 @app.route("/rope")
 def rope():
     return app.send_static_file('rope.html')
