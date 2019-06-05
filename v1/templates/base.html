@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css">
+    {% block head %}
+    <title> {% block title %} {% endblock %} TITLE </title>
+    {% endblock %}
+  </head>
+
+  <body>
+
+
+    {% block content %}
+    CONTENT
+    {% endblock %}
+  </body>
+
+  {% block footer %}
+  <br>
+  &copy; copyright 2019 by Subtle Asian Coders
+  {% endblock %}
+
+</html>
