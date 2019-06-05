@@ -13,6 +13,10 @@ def physics():
 def rope():
     return app.send_static_file('rope.html')
 
+@app.route("/coulomb")
+def cou():
+    return app.send_static_file('coulomb.html')
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
