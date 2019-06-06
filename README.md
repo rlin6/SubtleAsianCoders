@@ -54,8 +54,8 @@ $ sudo cp SubtleAsianStudying.conf /etc/apache2/sites-available
 
 ```
 $ cd SubtleAsianStudying
-$ mv app.py __init__.py
-$ pip3 install -r requirements.txt
+$ sudo mv app.py __init__.py
+$ sudo pip3 install -r requirements.txt
 ```
 
 9. Your var/www directory should look like:  
