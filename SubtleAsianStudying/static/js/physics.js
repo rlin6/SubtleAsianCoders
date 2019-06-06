@@ -50,9 +50,9 @@ function init() {
   arrow=null;
   counter = 0;
   // arrows
-  for (let x = 0; x < dimensions + 1; x+=f) {
-    for (let y = 0; y < dimensions + 1; y+=f) {
-      for (let z = 0; z < dimensions + 1; z+=f) {
+  for (let x = 0; x <= dimensions + 1; x+=f) {
+    for (let y = 0; y <= dimensions + 1; y+=f) {
+      for (let z = 0; z <= dimensions + 1; z+=f) {
         // var d = new THREE.Vector3(THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2)).normalize();
         d = new THREE.Vector3(0, 0, 0).normalize();
         ori = new THREE.Vector3(x - dimensions/2, y - dimensions/2, z - dimensions/2);
