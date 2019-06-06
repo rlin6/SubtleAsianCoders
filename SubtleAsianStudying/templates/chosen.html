@@ -15,68 +15,61 @@
     <h3> You requested information on {{dStr}}!</h3>
    </div>
    <br>
-   <div class="row">
-     <div class="columns">
-       <div class="table-scroll">
-   <table>
-					<thead>
-						<tr>
-<th> Information </th>
-{% for each in eList %}
-<th> {{each}} </th>
-{% endfor %}
 
 
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-<td> Mass </td>
-{% for each in mList %}
-<td> {{each}} </td>
-{% endfor %}
+         <div class="container bg-light">
+           <table class="table table-bordered table-hover">
+             <thead class="thead-dark">
+               <tr>
+                 <th scope="col">Information</th>
+                 {% for each in eList %}
+                 <th> scope="col" {{each}} </th>
+                 {% endfor %}
 
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <th scope="row">Mass</th>
+                 {% for each in mList %}
+                 <td> {{each}} </td>
+                 {% endfor %}
+               </tr>
+               <tr class="table-primary">
+                 <th scope="row">Electronegativity</th>
+                 {% for each in electroList %}
+                 <td> {{each}} </td>
+                 {% endfor %}
+               </tr>
+               <tr class="table-secondary">
+                 <th scope="row">Atomic Radius</th>
+                 {% for each in rList %}
+                  <td> {{each}} </td>
+                {% endfor %}
+               </tr>
+               <tr class="table-success">
+                 <th scope="row">Natural State</th>
+                 {% for each in sList %}
+                 <td> {{each}} </td>
+                 {% endfor %}
+               </tr>
+               <tr class="table-danger">
+                 <th scope="row">Year Discovered</th>
+                 {% for each in yList %}
+                 <td> {{each}} </td>
+                 {% endfor %}
+               </tr>
+               <tr class="table-info">
+                 <th scope="row">Blurb</th>
+                 {% for each in bList %}
+                 <td> {{each}} </td>
+                 {% endfor %}
+                 </tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
 
-						</tr>
-						<tr>
-              <td> Electronegativity </td>
-              {% for each in electroList %}
-              <td> {{each}} </td>
-              {% endfor %}
-
-						</tr>
-						<tr>
-              <td> Atomic Radius </td>
-              {% for each in rList %}
-              <td> {{each}} </td>
-              {% endfor %}
-						</tr>
-						<tr>
-              <td> Natural State </td>
-              {% for each in sList %}
-              <td> {{each}} </td>
-              {% endfor %}
-						</tr>
-						<tr>
-              <td> Year Discovered </td>
-              {% for each in yList %}
-              <td> {{each}} </td>
-              {% endfor %}
-
-						</tr>
-						<tr>
-              <td>
-              Blurb </td>
-              {% for each in bList %}
-              <td> {{each}} </td>
-              {% endfor %}
-						</tr>
-
-				</table>
-      </div>
-    </div>
-
-  </div>
 
     </center>
 

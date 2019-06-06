@@ -3,5 +3,5 @@ function addItem(x){
         //console.log(x)
         y = document.getElementById("chosen").innerHTML;
         console.log(y)
-        document.getElementById("chosen").innerHTML = y + ", " +x
+        document.getElementById("chosen").innerHTML = x + ", " + y
     }

@@ -30,6 +30,7 @@ def cou():
 @app.route("/receive", methods=['GET','POST'])
 def choose():
     elementList=request.form.getlist('type')
+
     displayStr=''
     for i in elementList:
         print(i)
