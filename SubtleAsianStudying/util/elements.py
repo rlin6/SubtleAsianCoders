@@ -1,4 +1,9 @@
-import json
+import json, os
+
+try:
+	os.chdir('/var/www/coders/coders/data')
+except:
+	pass
 
 with open('elements.json','r') as f:
     elements_dict=json.load(f)

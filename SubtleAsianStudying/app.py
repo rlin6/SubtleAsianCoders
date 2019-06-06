@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 app = Flask(__name__, template_folder='templates', static_url_path='')
-import elements as chempy
+from util import elements as chempy
 
 @app.route("/")
 def home():
