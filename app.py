@@ -16,7 +16,7 @@ def physics():
 '---------------------------------  PHYSICS  -----------------------'
 @app.route("/electric")
 def magnet():
-    return render_template('magnets.html')
+    return render_template('electric.html')
 @app.route("/rope")
 def rope():
     return app.send_static_file('rope.html')
