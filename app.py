@@ -8,15 +8,15 @@ def home():
 
 @app.route("/chem")
 def chemistry():
-    return render_template('chemistry.html')
+    return render_template('chemistryTemp.html')
 
 @app.route("/physics")
 def physics():
-    return render_template('tempPhysics.html')
+    return render_template('physics.html')
 '---------------------------------  PHYSICS  -----------------------'
 @app.route("/magnet")
 def magnet():
-    return render_template('physics.html')
+    return render_template('magnets.html')
 @app.route("/rope")
 def rope():
     return app.send_static_file('rope.html')
@@ -35,14 +35,14 @@ def choose():
         print(i)
         displayStr+=i
         displayStr+=', '
-        
+
     massList=[chempy.getMass(i) for i in elementList]
     electroList=[chempy.getElectro(i) for i in elementList]
     radiusList=[chempy.getRadius(i) for i in elementList]
     stateList=[chempy.getState(i) for i in elementList]
     yearList=[chempy.getYear(i) for i in elementList]
     blurbList=[chempy.getBlurb(i) for i in elementList]
-    
+
     return render_template('chosen.html',eList=elementList, dStr=displayStr, mList=massList,
                            electroList=electroList, rList=radiusList, sList=stateList,
                            yList=yearList,bList=blurbList)

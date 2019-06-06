@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<style>
+  #playground {
+    /* position: absolute; */
+    float: left;
+  }
+
+  #buttons{
+    float: left;
+    background-color: gray;
+  }
+
+</style>
+<body>
+  <div id="playground">
+    <div id="buttons">
+      <button id="chargePositive" style="color: red;">
+        +
+      </button>
+      <button id="chargeNegative" style="color:blue;">
+        -
+      </button>
+    </div>
+    <!--button id="arrange">
+      arrange
+    </button-->
+  </div>
+</body>
+
+<script src="https://threejs.org/build/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<script src="../three.js/examples/renderers/Projector.js"></script>
+<script src="{{ url_for('static', filename='js/physics.js') }}"></script>
