@@ -1,4 +1,4 @@
-# Subtle Asian Coders : Subtle Asian Studying! 
+# Subtle Asian Coders presents: Subtle Asian Studying! 
 ## Roster: Cathy Cai (Physics Backend), Ricky Lin (Project Manager), Claire Liu (Frontend), Kyle Tau (Chemistry Backend) 
 
 ---
@@ -31,43 +31,64 @@ $ sudo apt upgrade
 ```
 $ cd var/www
 ```
-
-5. Create and move into a directory named after your app:
-
-```
-$ mkdir <appname>
-$ cd <appname> 
-```
  
-6. Clone this repo in the <appname> directory https with:
+5. Clone this repo in the directory https with:
 
 ```
-$ git clone https://github.com/rlin6/SubtleAsianCoders.git <appname>
+$ sudo git clone https://github.com/rlin6/SubtleAsianCoders.git SubtleAsianStudying
 ```
 
-7. Going into the project directory, change app.py to __init__.py and install the requirements 
+6. Change the server name in SubtleAsianStudying.conf to your droplet's ip address. The line looks like this: 
 
 ```
-$ cd <appname>
-$ mv app.py __init__.py
-$ pip3 install -r requirements.txt
+        ServerName <IP Address Here>
 ```
-
-8. Change the server name in <appname>.wsgi to your droplet's ip address and move it to the directory outside of the repo folder :
+   
+7. Make a copy of the .conf file and move it to /etc/apache2/sites-available like so:
    
 ```
-$ mv <appname>.wsgi /var/www/<appname>/.
+$ sudo cp SubtleAsianStudying.conf /etc/apache2/sites-available
 ```
 
-9. Change directory to: 
+8. Going into the project directory, change app.py to __init__.py and install the requirements 
 
 ```
-$ cd ~/../../etc/apahce2/sites-enabled/
+$ cd SubtleAsianStudying
+$ sudo mv app.py __init__.py
+$ sudo pip3 install -r requirements.txt
 ```
 
-and move the config file to ```/etc/apahce2/sites-enabled```
+9. Your var/www directory should look like:  
 
-10. Run: ```a2ensite <appname>``` and restart the server: ```sudo service apache2 restart ```
+```
+SubtleAsianStudying/
+├── SubtleAsianStudying/
+│   ├── __init__.py
+│   ├── data
+│   ├── static
+│   ├── templates
+│   └── util
+├── doc/
+├── README.md
+├── .gitignore
+├── wolframbeta.conf
+└── wolframbeta.wsgi
+```
+
+10. Run: 
+
+```
+$ sudo a2ensite SubtleAsianStudying
+$ systemctl reload apache2
+$ sudo a2ensite wsgi
+``` 
+
+and restart the server: 
+
+```
+$ sudo service apache2 reload
+$ sudo service apache2 restart 
+```
 
 11. Go to the ip address of your droplet on a browser and enjoy! 
 ---
