@@ -19,6 +19,7 @@ var controls = new THREE.OrbitControls(camera, renderer.domElement);
 var dimensions = 8;
 var cgeometry;
 var charge_material;
+var z = 4;
 
 var cgeometry = new THREE.BoxGeometry(dimensions, dimensions, dimensions);
 var wireframe = new THREE.EdgesGeometry(cgeometry);
@@ -56,6 +57,10 @@ chargeNegative.addEventListener("click", function() {
 });
 //arrange.addEventListener("click", arrangeArrows);
 
+function changeZ() {
+  z = document.getElementById("zval").value;
+}
+
 
 function onDocumentMouseDown( event ) {
 
@@ -71,24 +76,24 @@ function onDocumentMouseDown( event ) {
     charge = new THREE.Mesh(cgeometry, charge_material);
 
     charge.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-  	charge.y = - ( event.clientY / window.innerHeight ) * 2 + 1
+  	charge.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    charge.z = z-dimensions/2;
+    console.log(charge.z)
     // charge.z = 0.5;
 
-    function getZ(){
-      var rayCaster = new THREE.Raycaster();
-      var mousePosition = new THREE.Vector2();
-      rayCaster.setFromCamera(mousePosition, camera);
-      // console.log('hi')
-      // console.log(scene.getObjectByName('MyObj_s').children);
-      var intersects = rayCaster.intersectObjects(scene.children, true);
-
-      if (intersects.length > 0){
-        return intersects[0].point;
-      }
-            }
-
-    charge.z = getZ().z;
-    console.log(charge.z);
+    // function getZ(){
+    //   var rayCaster = new THREE.Raycaster();
+    //   var mousePosition = new THREE.Vector2();
+    //   rayCaster.setFromCamera(mousePosition, camera);
+    //   // console.log('hi')
+    //   // console.log(scene.getObjectByName('MyObj_s').children);
+    //   var intersects = rayCaster.intersectObjects(scene.children, true);
+    //
+    //   if (intersects.length > 0){
+    //     return intersects[0].point;
+    //   }
+    //         }
+    // console.log(charge.z);
     // console.log(charge.z)
     // console.log(charge.x)
     // mouse.unproject( camera );

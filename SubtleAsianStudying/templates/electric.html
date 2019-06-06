@@ -6,10 +6,14 @@
 <style>
  p,h1,h2,h3,button {
    font-family:"Futura";
-   color:#374785
+   color:#374785;
  }
  body{
    background-image:url("background.png");
+ }
+
+ div{
+   margin: 20px;
  }
  /* #buttons {
    text-align: center;
@@ -34,6 +38,8 @@
         <button id="chargeNegative" class="btn btn-outline-primary float-right">
           NEGATIVE
         </button>
+        <p class="text-dark">Z-Value: <input type="text" id="zval" value="4">
+        <button class="btn btn-outline-warning " onclick="changeZ()">ENTER</button></p>
       </div>
       <!--button id="arrange">
         arrange
