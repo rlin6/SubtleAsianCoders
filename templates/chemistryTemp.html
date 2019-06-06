@@ -1,40 +1,20 @@
 
-
 <!DOCTYPE html>
 <html>
-<link rel="icon"
-	type="image/png"
-	href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1280px-Electron_Software_Framework_Logo.svg.png">
 	<head>
         <title>Periodic Table of Elements</title>
-		<style>html {
-  background: #787878;
-  /* Old browsers */
-  background: radial-gradient(ellipse at center, #454545 0%, #787878 100%);
-  background-size: cover;
-  height: 100%;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+		<style>
+      body {
+  background-image:url("../static/background.png");
+}
 
-body {
-  width: 90%;
-  width: 90vw;
-  margin: 1vh auto;
-  color: black; }
+  p,h1,h2,h3,button,.elements {
+    font-family:"Futura";
+  }
 
-
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #FFF; }
 
 .elements {
-  font-size: 10px; }
-  @media screen and (min-width: 600px) {
-    .elements {
-      font-size: calc(10px + 8 * ((100vw - 600px) / 1320)); } }
-  @media screen and (min-width: 1920px) {
-    .elements {
-      font-size: 18px; } }
+  font-size: 13px; }
 
 .element {
   display: none; }
@@ -52,7 +32,6 @@ h1 {
     justify-content: flex-end; }
   .element {
     display: flex;
-    font-weight: bold;
     align-items: center;
     justify-content: center;
     flex: 6vw 0 0;
@@ -90,26 +69,6 @@ h1 {
     width: 16px;
     height: 16px; } }
 
-.description {
-  padding: 1em;
-  margin: 2em 0;
-  text-overflow: ellipsis; }
-  .description h2 {
-    margin: 0; }
-  .description a {
-    color: #1d2441;
-    text-decoration: none; }
-  .description a:visited {
-    color: #3C4C88; }
-  .description a:hover, .description a:focus {
-    color: #3C4C88;
-    text-decoration: underline; }
-  .description .moz-link {
-    padding-left: 24px;
-    position: relative;
-    display: block;
-    background: url("moz.png") no-repeat left center;
-    word-break: break-word; }
 
 .element.group-base {
   background-color: #d48489; }
@@ -352,11 +311,8 @@ h1 {
 .key li.group-web-components:before {
   background-color: #84d4cf; }
 
-.hover-group-web-components .element {
-  opacity: .5; }
 
-.hover-group-web-components .element.group-web-components {
-  opacity: 1; }
+
 </style>
 	</head>
 	<body>
@@ -461,7 +417,7 @@ h1 {
 	<div class="row">
 		<a href="#title" class="element group-metadata"><span>temp</span></a>
 		<a href="#nav" class="element group-sectioning"><span>temp</span></a>
-		</a><a href="#figcaption" class="element group-text-content"><span>temp</span></a>
+		<a href="#figcaption" class="element group-text-content"><span>temp</span></a>
 		<a href="#p" class="element group-text-content"><span>p</span></a>
 		<a href="#bdo" class="element group-text-semantics"><span>temp</span></a>
 		<a href="#dfn" class="element group-text-semantics"><span>temp</span></a>
@@ -539,24 +495,6 @@ h1 {
 <input class="button" type="submit" value="Get Information">
 
 		</main>
-		<script type="text/javascript">
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		if (document.location.hostname === "madebymike.com.au") {
-		  ga('create', 'UA-42027047-2', 'auto');
-		  ga('send', 'pageview');
-		}
-		Array.prototype.forEach.call(document.querySelectorAll('.key li'), function(li){
-			li.addEventListener('mouseenter', function(){
-				document.body.classList.add('hover-'+this.className);
-			});
-			li.addEventListener('mouseleave', function(){
-				document.body.classList.remove('hover-'+this.className);
-			});
-		});
 
-		</script>
 	</body>
 </html>

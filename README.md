@@ -11,7 +11,7 @@ Subtle Asian Studying is a website designed to help students with chemistry and 
 
 ## Install and Running on Apache2
 
-1. Create your own Digital Ocean account on their website [here](https://www.digitalocean.com/). Follow their instructions to create your own Droplet that runs ubuntu v18.04 x64 and login.
+1. Create your own Digital Ocean account on their website [here](https://www.digitalocean.com/). Follow their instructions to create your own Droplet that runs ubuntu v18.04 x64. SSH into the droplet using ```ssh <user>@<ipAddress>``` and login.
 
 2. Install apache2. 
 
@@ -26,8 +26,50 @@ $ sudo apt update
 $ sudo apt upgrade
 ```
 
-4. Create --WIP--
+4. Move into the www directory with:
 
+```
+$ cd var/www
+```
+
+5. Create and move into a directory named after your app:
+
+```
+$ mkdir <appname>
+$ cd <appname> 
+```
+
+6. Change the server name in <appname>.wsgi to your droplet's ip address and move it to the directory outside of the repo folder :
+   
+```
+$ mv <appname>.wsgi /var/www/<appname>/.
+```
+ 
+7. Clone this repo in the <appname> directory https with:
+
+```
+$ git clone https://github.com/rlin6/SubtleAsianCoders.git <appname>
+```
+
+8. Going into the project directory, change app.py to __init__.py and install the requirements 
+
+```
+$ cd <appname>
+$ mv app.py __init__.py
+$ pip3 install -r requirements.txt
+```
+
+9. Change directory to: 
+
+```
+$ cd ~/../../etc/apahce2/sites-enabled/
+```
+
+and move the config file to ```/etc/apahce2/sites-enabled```
+
+10. Run: ```a2ensite <appname>``` and restart the server: ```sudo service apache2 restart ```
+
+11. Go to the ip address of your droplet on a browser and enjoy! 
 ---
 
 ## Install and Running on localhost
@@ -180,6 +222,11 @@ $ pip install jinja2
 ```
 
 - Flask-Restful 
+`flask-restful` is used to create our own chemistry api to store useful information for our website. Install it with 
+
+```bash
+$ pip install flask-restful
+```
 
 ### API 
   We created our own chemical elements API that provides us with the necessary information about each element. There will be no API keys required.

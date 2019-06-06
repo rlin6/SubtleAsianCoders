@@ -6,15 +6,35 @@ Kyle Tau
 pd 6
 ---------------------
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+rickyL -- 2019-06-06 12:02AM
+--------------------------------------------------------------
+- Updated README with launch instructions for apache2
+==============================================================
+
+rickyL -- 2019-06-05 10:00PM
+--------------------------------------------------------------
+- Added simulation of electrostatic force
+==============================================================
+
+rickyL -- 2019-06-05 8:32PM
+--------------------------------------------------------------
+- Added simulation of wave traveling down a rope
+==============================================================
+
+claireL -- 2019-06-04 11:00PM
+--------------------------------------------------------------
+- Added buttons to a page
+==============================================================
 
 claireL -- 2019-06-04 11:00PM
 --------------------------------------------------------------
@@ -24,6 +44,7 @@ elements.py
 - Used jinja and an html template for periodic tables to give infomration
 on selected elements
 - Most of chem is basically done just need to copy and paste in radio buttons
+==============================================================
 
 kyleT -- 2019-06-03 10:06PM
 --------------------------------------------------------------
@@ -42,12 +63,11 @@ claireL -- 2019-05-30 08:00AM
 --------------------------------------------------------------
 - pushed index.html with some jinja to try to implement kyle's api
 - fixed kyle's api so we don't need unecessary queries
-
 ==============================================================
 
 rickyL -- 2019-05-29 09:46PM
 --------------------------------------------------------------
-- Updated README to reflect current state of project 
+- Updated README to reflect current state of project
 ==============================================================
 
 rickyL -- 2019-05-29 11:47PM
@@ -101,14 +121,14 @@ kyleT & claireL -- 2019-05-13 12:31PM
 rickyL -- 2019-05-12 11:50AM
 --------------------------------------------------------------
 Added design.pdf with the following changes:
-- Reworded description to clarify that data visualization only 
+- Reworded description to clarify that data visualization only
 applies to physics and that there's one section per subject
-- Added an example of a physics simulation and additional 
+- Added an example of a physics simulation and additional
 possible chemistry features to description
-- Clarified that we're writing math algorithms in physics.js 
-and will be looking at some simulations for guidance 
-- Elaborated on chemistry & physics features and functionalities 
-described in the tasks 
+- Clarified that we're writing math algorithms in physics.js
+and will be looking at some simulations for guidance
+- Elaborated on chemistry & physics features and functionalities
+described in the tasks
 ==============================================================
 
 rickyL -- 2019-05-08 10:00PM

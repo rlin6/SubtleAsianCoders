@@ -1,16 +1,46 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 <html>
-{% extends "base.html" %}
+
   <head>
-        {% block link %}     
-        <link rel="stylesheet" href="../static/style.css">
-        {% endblock %} 
-        {% block title %}Home{% endblock %}
-  </head>
-  {% block body %}<br><h1 class="text-center">Subtle Asian Coding</h1>
+    {% block head %}
+    <title> Home </title>
+    {% endblock %}
 
-    <input type="button" class="button" value="Press This" />
+    {% block content %}
+    <style>
 
-    {% endblock %}  
 
+    </style>
+    <body >
+
+    <center>
+      <br>
+      <br>
+      <br>
+      <div style="background-color:white; border-color:white;" class="alert alert-primary alert-dismissible" role="alert">
+
+                   <p>Subtle Asian Studying is a website designed to help students with chemistry and physics with both an interactive periodic table of elements and physics simulations. The user can choose which subject to study on the homepage, each link leading to their respective pages. The chemistry side will have the periodic table where the user can hover over each element to see more details about them. The physics side will have a plethora of simulations to choose from, where the user can adjust parameters to see its effect on the phyiscal phenomena.</p>
+</div>
+
+<br>
+<a href="/chem">
+<button href="/chem" style="background-color:#A8D0E6; border-color:black;" type="button" class="btn btn-warning btn-lg btn-block"> Study Chemistry! </button>
+</a>
+<br>
+<a href="/physics">
+<button href="/physics" style="background-color:#A8D0E6; border-color:black;" type="button" class="btn btn-warning btn-lg btn-block"> Study Physics! </button>
+
+</a>
+
+
+
+   <br>
+
+    </center>
+
+
+
+
+    {% endblock %}
+  </body>
 </html>
