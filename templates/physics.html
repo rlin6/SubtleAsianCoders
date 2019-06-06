@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-<<<<<<< HEAD
 <html>
 
   <head>
@@ -35,44 +34,3 @@
     {% endblock %}
   </body>
 </html>
-=======
-<head>
-  <style>
-    #canv {
-      /* margin: 0 auto;
-      padding-left: 50px; */
-    }
-
-    button {
-      left: 10px;
-    }
-
-  </style>
-</head>
-<body>
-  {% block head %}
-  <title> Electric Field </title>
-  {% endblock %}
-  {% block content %}
-  <h1 class="text-center"> Electric Field Simulation</h1><br>
-    <div id="playground">
-      <div id="buttons">
-        <button id="chargePositive" class="btn btn-outline-danger float-right">
-          POSITIVE
-        </button>
-        <button id="chargeNegative" class="btn btn-outline-primary float-right">
-          NEGATIVE
-        </button>
-      </div>
-      <!--button id="arrange">
-        arrange
-      </button-->
-    </div>
-
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-    <script src="../three.js/examples/renderers/Projector.js"></script>
-    <script src="{{ url_for('static', filename='js/physics.js') }}"></script>
-  {% endblock %}
-</body>
->>>>>>> 3c67fefb891370f316f29ca0077c4042eb110a43
