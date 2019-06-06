@@ -3,14 +3,26 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+ p,h1,h2,h3,button {
+   font-family:"Futura";
+ }
+ body{
+   background-image:url("background.png");
+ }
+ </style>
+
     {% block head %}
     <title> {% block title %} {% endblock %} TITLE </title>
     {% endblock %}
   </head>
-
+  <br>
+  <br>
+  <a href="/">
+  <button type="button" href="/" style="margin-left: 40px; background-color:white; border-color:#24305E; color:#374785;" class="btn btn-outline-light btn-lg">subtle asian studying</button>
   <body>
-
+</a>
 
     {% block content %}
     {% endblock %}
@@ -18,7 +30,6 @@
 
   {% block footer %}
   <br>
-  &copy; copyright 2019 by Subtle Asian Coders
   {% endblock %}
 
 </html>
