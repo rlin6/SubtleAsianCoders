@@ -14,7 +14,7 @@ def chemistry():
 def physics():
     return render_template('physics.html')
 '---------------------------------  PHYSICS  -----------------------'
-@app.route("/magnet")
+@app.route("/electric")
 def magnet():
     return render_template('magnets.html')
 @app.route("/rope")
