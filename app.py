@@ -8,7 +8,7 @@ def home():
 
 @app.route("/chem")
 def chemistry():
-    return render_template('chemistryTemp.html')
+    return render_template('chemistry.html')
 
 @app.route("/physics")
 def physics():
