@@ -1,33 +1,40 @@
 {% extends 'base.html' %}
-<style>
-  #playground {
-    /* position: absolute; */
-    float: left;
-  }
+<head>
+  <style>
+    #canv {
+      /* margin: 0 auto;
+      padding-left: 50px; */
+    }
 
-  #buttons{
-    float: left;
-    background-color: gray;
-  }
+    button {
+      left: 10px;
+    }
 
-</style>
+  </style>
+</head>
 <body>
-  <div id="playground">
-    <div id="buttons">
-      <button id="chargePositive" style="color: red;">
-        +
-      </button>
-      <button id="chargeNegative" style="color:blue;">
-        -
-      </button>
+  {% block head %}
+  <title> Electric Field </title>
+  {% endblock %}
+  {% block content %}
+  <h1 class="text-center"> Electric Field Simulation</h1><br>
+    <div id="playground">
+      <div id="buttons">
+        <button id="chargePositive" class="btn btn-outline-danger float-right">
+          POSITIVE
+        </button>
+        <button id="chargeNegative" class="btn btn-outline-primary float-right">
+          NEGATIVE
+        </button>
+      </div>
+      <!--button id="arrange">
+        arrange
+      </button-->
     </div>
-    <!--button id="arrange">
-      arrange
-    </button-->
-  </div>
-</body>
 
-<script src="https://threejs.org/build/three.min.js"></script>
-<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-<script src="../three.js/examples/renderers/Projector.js"></script>
-<script src="{{ url_for('static', filename='js/physics.js') }}"></script>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="../three.js/examples/renderers/Projector.js"></script>
+    <script src="{{ url_for('static', filename='js/physics.js') }}"></script>
+  {% endblock %}
+</body>

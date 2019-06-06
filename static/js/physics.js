@@ -6,36 +6,38 @@ var renderer = new THREE.WebGLRenderer({
   antialias: true,
   alpha: true
 });
+// renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.domElement.id = 'canv';
 var charge = 0;
 document.getElementById("playground").appendChild( renderer.domElement );
 document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-var cubeDim = 8;
-var chargeGeom;
-var chargeMat;
+var dimensions = 8;
+var cgeometry;
+var charge_material;
 
-var cubeGeom = new THREE.BoxGeometry(cubeDim, cubeDim, cubeDim);
-var wireframe = new THREE.EdgesGeometry(cubeGeom);
-var cubeWire = new THREE.LineSegments(wireframe, new THREE.LineBasicMaterial({
+var cgeometry = new THREE.BoxGeometry(dimensions, dimensions, dimensions);
+var wireframe = new THREE.EdgesGeometry(cgeometry);
+var cwire = new THREE.LineSegments(wireframe, new THREE.LineBasicMaterial({
   // depthText: false,
   opacity: 1,
   transparent: true,
   color: 0xfada5e,
 }));
-// cubeWire.name = 'MyObj_s';
-scene.add(cubeWire);
+// cwire.name = 'MyObj_s';
+scene.add(cwire);
 
 // arrows
 var arrows = [];
-for (let x = 0; x < cubeDim + 1; x+=2) {
-  for (let y = 0; y < cubeDim + 1; y+=2) {
-    for (let z = 0; z < cubeDim + 1; z+=2) {
-      var dir = new THREE.Vector3(THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2)).normalize();
-      var origin = new THREE.Vector3(x - cubeDim/2, y - cubeDim/2, z - cubeDim/2);
-      var arrow = new THREE.ArrowHelper(dir, origin, 1,  0x800080, 0.10, 0.2, 0.02);
+for (let x = 0; x < dimensions + 1; x+=2) {
+  for (let y = 0; y < dimensions + 1; y+=2) {
+    for (let z = 0; z < dimensions + 1; z+=2) {
+      var direction = new THREE.Vector3(THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2)).normalize();
+      var ori = new THREE.Vector3(x - dimensions/2, y - dimensions/2, z - dimensions/2);
+      var arrow = new THREE.ArrowHelper(direction, ori, 1,  0x800080, 0.10, 0.2, 0.02);
       arrows.push(arrow);
       scene.add(arrow);
     }
@@ -61,12 +63,12 @@ function onDocumentMouseDown( event ) {
 
   if (charge != 0) {
 
-    chargeGeom = new THREE.SphereGeometry(0.25, 16, 12);
-    chargeMat = new THREE.MeshBasicMaterial({
+    cgeometry = new THREE.SphereGeometry(0.25, 16, 12);
+    charge_material = new THREE.MeshBasicMaterial({
       color: charge == 1 ? 0xff0000 : 0x0000ff
     });
 
-    charge = new THREE.Mesh(chargeGeom, chargeMat);
+    charge = new THREE.Mesh(cgeometry, charge_material);
 
     charge.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   	charge.y = - ( event.clientY / window.innerHeight ) * 2 + 1
@@ -114,9 +116,9 @@ function setCharge(val) {
 
 var direction = new THREE.Vector3();
 var normal = new THREE.Vector3();
-var forceVector = new THREE.Vector3();
+var force = new THREE.Vector3();
 var directions = [];
-var result = new THREE.Vector3();
+var resultant = new THREE.Vector3();
 
 function arrangeArrows() {
   arrows.forEach((arrow) => {
@@ -126,20 +128,20 @@ function arrangeArrows() {
       normal.copy(direction).normalize();
       directions.push({
         dir: (charge.userData.charge == -1 ? normal.negate() : normal).clone(),
-        force: 1 / Math.pow(forceVector.subVectors(arrow.position, charge.position).length(), 2)
+        force: 1 / Math.pow(force.subVectors(arrow.position, charge.position).length(), 2)
       });
     });
-    result.set(0, 0, 0);
+    resultant.set(0, 0, 0);
     directions.forEach((dir) => {
-      result.addScaledVector(dir.dir, dir.force);
+      resultant.addScaledVector(dir.dir, dir.force);
     })
-    arrow.setDirection(result.normalize());
+    arrow.setDirection(resultant.normalize());
   });
 };
 
 var clock = new THREE.Clock();
 
-var axes = new THREE.AxesHelper( cubeDim );
+var axes = new THREE.AxesHelper( dimensions );
 var colors = axes.geometry.attributes.color;
 
 colors.setXYZ( 0, 0, 0, 0 ); // index, R, G, B
@@ -151,12 +153,12 @@ colors.setXYZ( 5, 0, 0, 0 ); // blue
 
 var pos = axes.geometry.attributes.position;
 
-pos.setXYZ( 0, cubeDim, -cubeDim/2, -cubeDim/2 );
-pos.setXYZ( 1, -cubeDim/2, -cubeDim/2, -cubeDim/2 );
-pos.setXYZ( 2, -cubeDim/2, cubeDim, -cubeDim/2 );
-pos.setXYZ( 3, -cubeDim/2, -cubeDim/2, -cubeDim/2 );
-pos.setXYZ( 4, -cubeDim/2, -cubeDim/2, cubeDim );
-pos.setXYZ( 5, -cubeDim/2, -cubeDim/2, -cubeDim/2 );
+pos.setXYZ( 0, dimensions, -dimensions/2, -dimensions/2 );
+pos.setXYZ( 1, -dimensions/2, -dimensions/2, -dimensions/2 );
+pos.setXYZ( 2, -dimensions/2, dimensions, -dimensions/2 );
+pos.setXYZ( 3, -dimensions/2, -dimensions/2, -dimensions/2 );
+pos.setXYZ( 4, -dimensions/2, -dimensions/2, dimensions );
+pos.setXYZ( 5, -dimensions/2, -dimensions/2, -dimensions/2 );
 
 // var  textGeo = new THREE.TextGeometry('Y', {
 //      size: 5,
