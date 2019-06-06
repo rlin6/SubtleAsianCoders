@@ -38,25 +38,25 @@ $ cd var/www
 $ mkdir <appname>
 $ cd <appname> 
 ```
-
-6. Change the server name in <appname>.wsgi to your droplet's ip address and move it to the directory outside of the repo folder :
-   
-```
-$ mv <appname>.wsgi /var/www/<appname>/.
-```
  
-7. Clone this repo in the <appname> directory https with:
+6. Clone this repo in the <appname> directory https with:
 
 ```
 $ git clone https://github.com/rlin6/SubtleAsianCoders.git <appname>
 ```
 
-8. Going into the project directory, change app.py to __init__.py and install the requirements 
+7. Going into the project directory, change app.py to __init__.py and install the requirements 
 
 ```
 $ cd <appname>
 $ mv app.py __init__.py
 $ pip3 install -r requirements.txt
+```
+
+8. Change the server name in <appname>.wsgi to your droplet's ip address and move it to the directory outside of the repo folder :
+   
+```
+$ mv <appname>.wsgi /var/www/<appname>/.
 ```
 
 9. Change directory to: 
