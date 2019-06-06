@@ -2,11 +2,11 @@ import json, os
 
 try:
 	os.chdir('/var/www/coders/coders/data')
+	with open('elements.json','r') as f:
+    		elements_dict=json.load(f)
 except:
-	pass
-
-with open('elements.json','r') as f:
-    elements_dict=json.load(f)
+	with open('data/elements.json','r') as f:
+	    elements_dict=json.load(f)
         
 def getElement(symbol):
     for element in elements_dict:
