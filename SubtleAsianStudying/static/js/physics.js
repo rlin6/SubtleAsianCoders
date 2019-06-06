@@ -28,7 +28,7 @@ var d;
 var ori;
 var arrow;
 var counter;
-var f = 1.5
+var f = (dimensions+1)/6;
 
 function init() {
 
@@ -88,6 +88,7 @@ function changeDim() {
     if (!isNaN(dim) && dim > 0) {
       console.log('im')
       dimensions = dim;
+      // f = (dimensions+1)/6;
       clearThree(scene);
       init();
     }
