@@ -1,12 +1,12 @@
 import json, os
 
 try:
-	with open('data/elements.json','r') as f:
-    		elements_dict=json.load(f)
+        with open('data/elements.json','r') as f:
+                elements_dict=json.load(f)
 except:
         os.chdir('/var/www/SubtleAsianStudying/SubtleAsianStudying/data')
-	with open('elements.json','r') as f:
-	    elements_dict=json.load(f)
+        with open('elements.json','r') as f:
+                elements_dict=json.load(f)
         
 def getElement(symbol):
     for element in elements_dict:
