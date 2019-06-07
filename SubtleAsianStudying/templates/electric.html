@@ -32,14 +32,16 @@
   <h1 class="text-center"> Electric Field Simulation</h1><br>
     <div id="playground">
       <div id="buttons">
-        <button id="chargePositive" class="btn btn-outline-danger float-right">
+        <p><button id="chargePositive" class="btn btn-outline-danger float-right">
           POSITIVE
-        </button>
-        <button id="chargeNegative" class="btn btn-outline-primary float-right">
+        </button></p>
+        <p><button id="chargeNegative" class="btn btn-outline-primary float-right">
           NEGATIVE
-        </button>
+        </button></p>
         <p class="text-dark">Z-Value: <input type="text" id="zval" value="4">
         <button class="btn btn-outline-warning " onclick="changeZ()">ENTER</button></p>
+        <p class="text-dark">Cube Dimensions: <input type="text" id="dim" value="8">
+        <button class="btn btn-outline-success " onclick="changeDim()">ENTER</button></p>
       </div>
       <!--button id="arrange">
         arrange

@@ -80,7 +80,7 @@ SubtleAsianStudying/
 ```
 $ sudo a2ensite SubtleAsianStudying
 $ systemctl reload apache2
-$ sudo a2ensite wsgi
+$ sudo a2enmod wsgi
 ``` 
 
 and restart the server: 
