@@ -16,6 +16,12 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+claireL -- 2019-06-06 10:08PM
+--------------------------------------------------------------
+-finished chem
+-cleaned up some buttons
+-fixed table and parsed through submission to strip white space and commas
+
 rickyL -- 2019-06-07 8:46PM
 --------------------------------------------------------------
 Review from write_illegibly:
