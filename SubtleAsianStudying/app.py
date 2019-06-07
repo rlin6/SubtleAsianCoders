@@ -17,9 +17,10 @@ def physics():
 @app.route("/electric")
 def magnet():
     return render_template('electric.html')
-@app.route("/rope")
-def rope():
-    return app.send_static_file('rope.html')
+
+@app.route("/projectile")
+def projectile():
+    return app.send_static_file('projectile.html')
 
 @app.route("/coulomb")
 def cou():
