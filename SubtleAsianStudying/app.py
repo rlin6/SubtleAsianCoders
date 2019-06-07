@@ -20,11 +20,11 @@ def magnet():
 
 @app.route("/projectile")
 def projectile():
-    return app.send_static_file('projectile.html')
+    return app.send_static_file('Projectile.html')
 
 @app.route("/coulomb")
 def cou():
-    return app.send_static_file('coulomb.html')
+    return app.send_static_file('Coulomb.html')
 
 '---------------------------------  CHEMISTRY -----------------------'
 
