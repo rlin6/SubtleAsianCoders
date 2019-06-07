@@ -21,14 +21,18 @@
 <body>
 </a>
 <center>
+	<form action="/receive" method="GET">
+
 <h1>Elements Chosen:</h1>
 <div style="font-family:"Futura";" id='chosen' class="alert alert-primary" role="alert"></div>
-<button onclick="addItem('empty')">Clear</button>
+<button onclick="addItem('empty')" class="btn btn-success btn-lg" >Clear</button>
+
+<button type="submit" class="btn btn-info btn-lg" name="chosen" id="submit">Get Information!</button>
+
 </center>
 <br>
 <br>
 <!-- ==================periodic table==================== -->
-<form action="/receive" method="GET">
 <div class="periodic">
   <div class="periodic-row">
     <div class="cell" onclick="addItem('H')">
@@ -934,9 +938,6 @@
 </div>
 <br>
 <br>
-<center>
-<button type="submit" class="btn btn-primary btn-lg" name="chosen" id="submit">Get Information!</button>
-</center>
 <br>
 <br>
 </form>

@@ -29,11 +29,12 @@ def cou():
 
 @app.route("/receive", methods=['GET','POST'])
 def choose():
-    elementList=request.form.getlist('type')
-
+    eL=request.args['chosen']
+    elementList=eL.split(', ')
+    print(elementList)
     displayStr=''
     for i in elementList:
-        print(i)
+        #print(i)
         displayStr+=i
         displayStr+=', '
 
