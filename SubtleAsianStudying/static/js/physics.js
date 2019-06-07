@@ -19,33 +19,85 @@ var controls = new THREE.OrbitControls(camera, renderer.domElement);
 var dimensions = 8;
 var cgeometry;
 var charge_material;
-var z = 4;
+var z = dimensions/2;
+var cgeometry;
+var wireframe;
+var cwire;
+var arrows;
+var d;
+var ori;
+var arrow;
+var counter;
+var f = 1.5;
 
-var cgeometry = new THREE.BoxGeometry(dimensions, dimensions, dimensions);
-var wireframe = new THREE.EdgesGeometry(cgeometry);
-var cwire = new THREE.LineSegments(wireframe, new THREE.LineBasicMaterial({
-  // depthText: false,
-  opacity: 1,
-  transparent: true,
-  color: 0xfada5e,
-}));
-// cwire.name = 'MyObj_s';
-scene.add(cwire);
+function init() {
 
-// arrows
-var arrows = [];
-for (let x = 0; x < dimensions + 1; x+=2) {
-  for (let y = 0; y < dimensions + 1; y+=2) {
-    for (let z = 0; z < dimensions + 1; z+=2) {
-      var d = new THREE.Vector3(THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2)).normalize();
-      var ori = new THREE.Vector3(x - dimensions/2, y - dimensions/2, z - dimensions/2);
-      var arrow = new THREE.ArrowHelper(d, ori, 1,  0x800080, 0.10, 0.2, 0.02);
-      arrows.push(arrow);
-      scene.add(arrow);
+  cgeometry = new THREE.BoxGeometry(dimensions, dimensions, dimensions);
+  wireframe = new THREE.EdgesGeometry(cgeometry);
+  cwire = new THREE.LineSegments(wireframe, new THREE.LineBasicMaterial({
+    // depthText: false,
+    opacity: 1,
+    transparent: true,
+    color: 0xfada5e,
+  }));
+  // cwire.name = 'MyObj_s';
+  scene.add(cwire);
+  // console.log(dimensions)
+
+  arrows = [];
+  d=null;
+  ori=null;
+  arrow=null;
+  counter = 0;
+  // arrows
+  for (let x = 0; x < dimensions + 1; x+=f) {
+    for (let y = 0; y < dimensions + 1; y+=f) {
+      for (let z = 0; z < dimensions + 1; z+=f) {
+        // var d = new THREE.Vector3(THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2), THREE.Math.randFloatSpread(2)).normalize();
+        d = new THREE.Vector3(0, 0, 0).normalize();
+        ori = new THREE.Vector3(x - dimensions/2, y - dimensions/2, z - dimensions/2);
+        arrow = new THREE.ArrowHelper(d, ori, 1,  0x800080, 0.10, 0.2, 0.02);
+        arrows.push(arrow);
+        scene.add(arrow);
+        // console.log(dimensions)
+        // console.log(Math.floor(Math.pow(((dimensions+1) / f), 3)))
+        counter+=1;
+        if (counter > Math.floor(Math.pow(((dimensions+1) / f), 3))) {
+          break;
+        };
+      };
+    };
+  };
+};
+
+init();
+
+function clearThree(scene){
+  while(scene.children.length > 0){
+    clearThree(scene.children[0])
+    scene.remove(scene.children[0]);
+  }
+  if(scene.geometry) scene.geometry.dispose()
+  if(scene.material) scene.material.dispose()
+  if(scene.texture) scene.texture.dispose()
+}
+
+function changeDim() {
+  try {
+    dim = parseInt(document.getElementById("dim").value);
+    if (!isNaN(dim) && dim > 0) {
+      console.log('im')
+      dimensions = dim;
+      // f = (dimensions+1)/6;
+      clearThree(scene);
+      init();
     }
+}
+  catch(error) {
+    console.log(error)
   }
 }
-console.log(arrows);
+
 
 // charges
 var charges = [];
@@ -58,7 +110,17 @@ chargeNegative.addEventListener("click", function() {
 //arrange.addEventListener("click", arrangeArrows);
 
 function changeZ() {
-  z = document.getElementById("zval").value;
+  try {
+    t = parseInt(document.getElementById("zval").value);
+    if (t!=null && t>=0 && t<=dimensions) {
+      z = t;
+      console.log('changed')
+      console.log(z)
+    }
+}
+  catch(error) {
+    console.log(error)
+  }
 }
 
 
@@ -78,7 +140,7 @@ function onDocumentMouseDown( event ) {
     charge.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   	charge.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
     charge.z = z-dimensions/2;
-    console.log(charge.z)
+    // console.log(charge.z)
     // charge.z = 0.5;
 
     // function getZ(){
