@@ -16,6 +16,12 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+rickyL -- 2019-06-07 8:46PM
+--------------------------------------------------------------
+Review from write_illegibly:
+They follow our instructions but because of a typo on our README, they could not execute the step sudo a2enmod wsgi. However, this step was not essential to the running of the app and they still managed to get to the right webpage. 
+==============================================================
+
 rickyL -- 2019-06-07 5:45PM
 --------------------------------------------------------------
 - Fixed apache2 launch instructions
