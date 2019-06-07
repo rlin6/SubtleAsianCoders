@@ -38,6 +38,7 @@ def choose():
         #print(i)
         displayStr+=i
         displayStr+=', '
+    displayStr = displayStr[:len(displayStr)-2]
 
     massList=[chempy.getMass(i) for i in elementList]
     electroList=[chempy.getElectro(i) for i in elementList]

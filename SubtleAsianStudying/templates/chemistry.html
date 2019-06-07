@@ -21,12 +21,13 @@
 <body>
 </a>
 <center>
-	<form action="/receive" method="GET">
 
-<h1>Elements Chosen:</h1>
-<div style="font-family:"Futura";" id='chosen' class="alert alert-primary" role="alert"></div>
-<button onclick="addItem('empty')" class="btn btn-success btn-lg" >Clear</button>
 
+<h1>Elements Chosen:</h1><button onclick="addItem('empty')" class="btn btn-success btn-lg">Clear</button>
+<br>
+<br>
+<div style="font-family:Futura;" id='chosen' class="alert alert-primary" role="alert"></div>
+<form action="/receive" method="GET">
 <button type="submit" class="btn btn-info btn-lg" name="chosen" id="submit">Get Information!</button>
 
 </center>
