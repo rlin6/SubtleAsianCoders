@@ -6,6 +6,8 @@
 ## Overview
 
 Subtle Asian Studying is a website designed to help students with chemistry and physics with both an interactive periodic table of elements and physics simulations. The user can choose which subject to study on the homepage, each link leading to their respective pages. The chemistry side will have the periodic table where the user can hover over each element to see more details about them. The physics side will have a plethora of simulations to choose from, where the user can adjust parameters to see its effect on the phyiscal phenomena.  
+Video demo here[https://youtu.be/p8SWGJBbpIE]
+
 
 ---
 
